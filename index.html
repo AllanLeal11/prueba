@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Financiera</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+        }
+        input, button {
+            margin: 10px 0;
+            padding: 10px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Calculadora Financiera</h1>
+        <label for="principal">Monto Inicial:</label>
+        <input type="number" id="principal" placeholder="Monto Inicial">
+        
+        <label for="rate">Tasa de Interés Anual (%):</label>
+        <input type="number" id="rate" placeholder="Tasa de Interés Anual">
+        
+        <label for="time">Tiempo (años):</label>
+        <input type="number" id="time" placeholder="Tiempo en años">
+        
+        <button onclick="calculate()">Calcular</button>
+        
+        <h2>Resultados:</h2>
+        <p id="futureValue"></p>
+        <p id="monthlyPayment"></p>
+        <p id="compoundInterest"></p>
+    </div>
+
+    <script>
+        function calculate() {
+            let principal = parseFloat(document.getElementById('principal').value);
+            let rate = parseFloat(document.getElementById('rate').value) / 100;
+            let time = parseFloat(document.getElementById('time').value);
+
+            let futureValue = principal * Math.pow((1 + rate), time);
+            let monthlyRate = rate / 12;
+            let n = time * 12;
+            let monthlyPayment = principal * monthlyRate / (1 - Math.pow((1 + monthlyRate), -n));
+            let compoundInterest = principal * Math.pow((1 + rate / 12), 12 * time);
+
+            document.getElementById('futureValue').innerText = "Valor Futuro: $" + futureValue.toFixed(2);
+            document.getElementById('monthlyPayment').innerText = "Pago Mensual: $" + monthlyPayment.toFixed(2);
+            document.getElementById('compoundInterest').innerText = "Interés Compuesto: $" + compoundInterest.toFixed(2);
+        }
+    </script>
+</body>
+</html>
