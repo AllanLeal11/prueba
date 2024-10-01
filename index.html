@@ -3,62 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Financiera</title>
+    <title>Mejores IA para Estudiantes</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #ffffff;
         }
-        .container {
-            max-width: 600px;
-            margin: auto;
+        header {
+            background-color: #1f1f1f;
+            color: #00d1b2;
+            padding: 1em 0;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        main {
             padding: 20px;
-            border: 1px solid #ccc;
-            border-radius: 10px;
         }
-        input, button {
+        section {
+            background: #1e1e1e;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        h1, h2 {
+            color: #00d1b2;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background: #2a2a2a;
             margin: 10px 0;
             padding: 10px;
-            width: 100%;
+            border-radius: 4px;
+        }
+        a {
+            color: #00d1b2;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Calculadora Financiera</h1>
-        <label for="principal">Monto Inicial:</label>
-        <input type="number" id="principal" placeholder="Monto Inicial">
-        
-        <label for="rate">Tasa de Interés Anual (%):</label>
-        <input type="number" id="rate" placeholder="Tasa de Interés Anual">
-        
-        <label for="time">Tiempo (años):</label>
-        <input type="number" id="time" placeholder="Tiempo en años">
-        
-        <button onclick="calculate()">Calcular</button>
-        
-        <h2>Resultados:</h2>
-        <p id="futureValue"></p>
-        <p id="monthlyPayment"></p>
-        <p id="compoundInterest"></p>
-    </div>
-
-    <script>
-        function calculate() {
-            let principal = parseFloat(document.getElementById('principal').value);
-            let rate = parseFloat(document.getElementById('rate').value) / 100;
-            let time = parseFloat(document.getElementById('time').value);
-
-            let futureValue = principal * Math.pow((1 + rate), time);
-            let monthlyRate = rate / 12;
-            let n = time * 12;
-            let monthlyPayment = principal * monthlyRate / (1 - Math.pow((1 + monthlyRate), -n));
-            let compoundInterest = principal * Math.pow((1 + rate / 12), 12 * time);
-
-            document.getElementById('futureValue').innerText = "Valor Futuro: $" + futureValue.toFixed(2);
-            document.getElementById('monthlyPayment').innerText = "Pago Mensual: $" + monthlyPayment.toFixed(2);
-            document.getElementById('compoundInterest').innerText = "Interés Compuesto: $" + compoundInterest.toFixed(2);
-        }
-    </script>
+    <header>
+        <h1>Mejores IA para Estudiantes</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Introducción</h2>
+            <p>En la era digital, las herramientas de inteligencia artificial (IA) se han convertido en aliados indispensables para los estudiantes. Estas herramientas no solo facilitan el aprendizaje, sino que también optimizan el tiempo y mejoran la productividad. A continuación, te presentamos algunas de las mejores IA que pueden transformar tu experiencia educativa.</p>
+        </section>
+        <section>
+            <h2>1. Grammarly</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Grammarly es una herramienta que ayuda a mejorar la gramática y la ortografía en tus escritos. Es ideal para redactar ensayos, correos electrónicos y cualquier otro tipo de documento.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Corrección gramatical y ortográfica.</li>
+                        <li>Sugerencias de estilo.</li>
+                        <li>Integración con múltiples plataformas.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>2. ChatGPT</h2>
+            <ul>
+                <li><strong>Descripción:</strong> ChatGPT es un asistente virtual que puede responder preguntas, ayudar con tareas y proporcionar explicaciones detalladas sobre diversos temas.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Respuestas rápidas y precisas.</li>
+                        <li>Capacidad para entender y generar texto en múltiples idiomas.</li>
+                        <li>Ideal para resolver dudas académicas.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>3. Wolfram Alpha</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Wolfram Alpha es una herramienta de búsqueda computacional que proporciona respuestas precisas a preguntas científicas y matemáticas.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Solución de problemas matemáticos.</li>
+                        <li>Información detallada sobre temas científicos.</li>
+                        <li>Generación de gráficos y visualizaciones.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>4. Notion AI</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Notion AI es una herramienta de organización que ayuda a gestionar notas, tareas y proyectos de manera eficiente.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Organización de notas y tareas.</li>
+                        <li>Colaboración en tiempo real.</li>
+                        <li>Integración con otras herramientas de productividad.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>5. Quillbot</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Quillbot es una herramienta que ayuda a resumir y parafrasear textos de manera eficiente.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Resumen de textos largos.</li>
+                        <li>Parafraseo para evitar el plagio.</li>
+                        <li>Integración con editores de texto.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>6. Cite This For Me</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Cite This For Me es una herramienta que genera citas y bibliografía en diferentes estilos de formato.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Generación automática de citas.</li>
+                        <li>Soporte para múltiples estilos de formato (APA, MLA, Chicago, etc.).</li>
+                        <li>Fácil de usar.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>7. Mendeley</h2>
+            <ul>
+                <li><strong>Descripción:</strong> Mendeley es una herramienta de gestión de referencias que ayuda a organizar y compartir investigaciones.</li>
+                <li><strong>Características:</strong>
+                    <ul>
+                        <li>Gestión de referencias y bibliografía.</li>
+                        <li>Colaboración en investigaciones.</li>
+                        <li>Integración con procesadores de texto.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Conclusión</h2>
+            <p>Estas herramientas de IA pueden ser de gran ayuda para mejorar tu rendimiento académico y facilitar tu proceso de aprendizaje. ¡Explora cada una de ellas y descubre cuál se adapta mejor a tus necesidades!</p>
+        </section>
+    </main>
 </body>
 </html>
